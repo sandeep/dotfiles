@@ -1,6 +1,14 @@
+installation
+============
+
 Run `git submodule init` and `git submodule update`
-Run install.sh which creates symlinks to all the config files
-Launch vim and type :BundleInstall
+
+Run `install.sh` which creates symlinks to all the config files
+
+Launch `vim` and type `:BundleInstall`
+
+Profit!
+
 ack.vim
 =======
 
