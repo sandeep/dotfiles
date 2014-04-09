@@ -1,5 +1,6 @@
+Run `git submodule init` and `git submodule update`
 Run install.sh which creates symlinks to all the config files
-
+Launch vim and type :BundleInstall
 ack.vim
 =======
 
