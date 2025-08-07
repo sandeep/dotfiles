@@ -2,13 +2,12 @@
 [user]
 	name = Sandeep
 	email = sandeepc@yahoo.com
+
 [credential]
   helper = osxkeychain  # Use the macOS Keychain to store credentials
 [push]
   default = simple  # Use 'simple' push behavior by default
-[http]
-  postBuffer = 524288000  # Set the HTTP post buffer size to 500MB
-  sslVerify = true  # Ensure SSL verification is enabled
+
 [fetch]
   prune = true  # Automatically prune deleted branches during fetch
 [branch]
@@ -17,14 +16,12 @@
 
 [core]
 	excludesfile = /Users/sandeep/.gitignore_global
-[gpg]
-	format = ssh
-[commit]
-	gpgsign = true
+
 [init]
 	defaultBranch = main
 [color]
 	uni = auto
+
 [color "branch"]
   current = yellow reverse
   local = yellow
