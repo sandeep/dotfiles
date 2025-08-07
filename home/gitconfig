@@ -1,18 +1,46 @@
+# This is Git's per-user configuration file.
 [user]
-	name = sandeep
+	name = Sandeep
 	email = sandeepc@yahoo.com
+[credential]
+  helper = osxkeychain  # Use the macOS Keychain to store credentials
+[push]
+  default = simple  # Use 'simple' push behavior by default
+[http]
+  postBuffer = 524288000  # Set the HTTP post buffer size to 500MB
+  sslVerify = true  # Ensure SSL verification is enabled
+[fetch]
+  prune = true  # Automatically prune deleted branches during fetch
+[branch]
+  autosetupmerge = always  # Automatically set up tracking branches
+  autosetuprebase = always  # Automatically set up rebase for new branches
 
-[rerere]
-	enabled = 1
-	autoupdate = true
+[core]
+	excludesfile = /Users/sandeep/.gitignore_global
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
+[init]
+	defaultBranch = main
 [color]
-  ui = auto
+	uni = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+
 [alias]
   st = status
   di = diff
   ci = commit
   br = branch
   llog = log --date=local
-
-[heroku]
-	account = work
+  co = checkout
+  unstage = reset HEAD --
+  amend = commit --amend
+  last = log -1 HEAD
+  lg = log --graph --oneline --decorate
+  hist = log --pretty=format:'%C(yellow)%h%Creset %C(green)(%ad)%Creset %C(bold blue)%an%Creset %C(red)%s%Creset %C(bold yellow)%d%Creset' --date=short
+  type = cat-file -t
+  dump = cat-file -p
